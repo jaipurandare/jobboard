@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app = "jobsite">
+   
+   <head>
+      <script src = "angular.min.js"></script>
+      <script src = "app.js"></script>
+   </head>
+   
+   <body>
+      <div>
+         <label>Name:</label>
+         <input type = "text" ng-model = "yourName" placeholder = "Enter a name here">
+         <hr />
+         
+         <h1>Hello {{yourName}}!</h1>
+
+         <div ng-controller="JobsController as jc">
+            <div ng-repeat="job in jc.jobs" >
+               <div>Job Title : {{job.title}}</div>
+            </div>
+         </div>
+        
+        <jobs-list></jobs-list>
+
+      </div>
+      
+   </body>
+</html>
